@@ -89,7 +89,7 @@ def get_feature_vec(model, x, labels):
 
 def cos_sim(model, feature_vec, labels, filename):
 
-    image = np.array(cv2.imread(os.path.join(os.paht.abspath('./datasets/cuhk01/'), filename)))
+    image = np.array(cv2.imread(os.path.join(os.paht.abspath('./datasets/mars/'), filename)))
     input_feature_vec = model.predict(np.expand_dims(image, axis=0))
     similarity = np.sum(feature_vec * input_feature_vec, axis=1)
     similarity = similarity / np.linalg.norm(feature_vec, axis=1)
