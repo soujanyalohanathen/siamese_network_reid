@@ -72,8 +72,8 @@ def base_model():
 
 def load_data():
 
-    filenames = os.listdir('./datasets/cuhk01/')
-    x = np.array([cv2.imread(os.path.join(os.path.abspath('./datasets/cuhk01/'), filename)) for filename in filenames])
+    filenames = os.listdir('./datasets/mars/')
+    x = np.array([cv2.imread(os.path.join(os.path.abspath('./datasets/mars/'), filename)) for filename in filenames])
     labels = np.array([int(filename[:4]) for filename in filenames])
     return x, to_categorical(labels)
 
